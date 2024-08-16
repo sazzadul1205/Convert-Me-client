@@ -54,7 +54,7 @@ const PrintingCalculator = () => {
 
       <div className="mt-8">
         <h2 className="text-xl font-bold mb-2 text-black">Log</h2>
-        <div className="bg-gray-200 p-4 rounded h-64 overflow-y-auto bg-white">
+        <div className=" p-4 rounded h-64 overflow-y-auto bg-white">
           {log.length > 0 ? (
             log.map((entry, index) => <div key={index}>{entry}</div>)
           ) : (
