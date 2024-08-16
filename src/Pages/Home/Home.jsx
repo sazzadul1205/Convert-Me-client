@@ -4,6 +4,8 @@ import BasicCalculator from "./BasicCalculator/BasicCalculator";
 import ScientificCalculator from "./ScientificCalculator/ScientificCalculator";
 import GraphingCalculator from "./GraphingCalculator/GraphingCalculator";
 import FinancialCalculator from "./FinancialCalculator/FinancialCalculator";
+import ProgrammableCalculator from "./ProgrammableCalculator/ProgrammableCalculator";
+import PrintingCalculator from "./PrintingCalculator/PrintingCalculator";
 
 const Home = () => {
   return (
@@ -45,6 +47,12 @@ const Home = () => {
         </TabPanel>
         <TabPanel>
           <FinancialCalculator></FinancialCalculator>
+        </TabPanel>
+        <TabPanel>
+          <ProgrammableCalculator></ProgrammableCalculator>
+        </TabPanel>
+        <TabPanel>
+          <PrintingCalculator></PrintingCalculator>
         </TabPanel>
       </Tabs>
     </div>
