@@ -43,9 +43,9 @@ const BasicCalculator = () => {
   ];
 
   return (
-    <div className="bg-gray-100 h-[700px]">
-      <div className="flex justify-center  bg-gray-100 py-10">
-        <div className="bg-white p-4 rounded-lg shadow-lg w-80">
+    <div className="bg-gray-100 h-screen">
+      <div className="flex justify-center pt-20">
+        <div className="bg-white p-4 rounded-lg shadow-lg w-[500px]">
           <div className="mb-4 p-2 bg-gray-200 rounded-lg text-right">
             <div className="text-gray-500">{input || "0"}</div>
             <div className="text-2xl">{result || "0"}</div>

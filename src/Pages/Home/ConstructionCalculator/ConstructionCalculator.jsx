@@ -95,7 +95,7 @@ const ConstructionCalculator = () => {
             />
           </div>
 
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 gap-2">
             <button
               onClick={handleCalculateArea}
               className="p-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 w-2/5"

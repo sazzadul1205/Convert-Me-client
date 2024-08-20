@@ -51,23 +51,27 @@ const GraphingCalculator = () => {
   };
 
   return (
-    <div className="flex flex-col items-center pt-8 bg-gray-200 h-screen">
-      <h1 className="text-2xl font-bold mb-4 text-black">Graphing Calculator</h1>
-      <input
-        type="text"
-        value={expression}
-        onChange={handleChange}
-        placeholder="Enter expression (e.g., x*x)"
-        className="border p-2 mb-4 w-1/2 bg-white"
-      />
-      <button
-        onClick={plotGraph}
-        className="bg-blue-500 text-white px-4 py-2 rounded mb-4"
-      >
-        Plot Graph
-      </button>
-      <div className="w-3/4">
-        <Line data={data} />
+    <div className="bg-gray-200 h-screen">
+      <div className="flex flex-col items-center pt-20 ">
+        <h1 className="text-2xl font-bold mb-4 text-black">
+          Graphing Calculator
+        </h1>
+        <input
+          type="text"
+          value={expression}
+          onChange={handleChange}
+          placeholder="Enter expression (e.g., x*x)"
+          className="border p-2 mb-4 w-1/2 bg-white"
+        />
+        <button
+          onClick={plotGraph}
+          className="bg-blue-500 text-white px-4 py-2 rounded mb-4"
+        >
+          Plot Graph
+        </button>
+        <div className="w-3/4">
+          <Line data={data} />
+        </div>
       </div>
     </div>
   );

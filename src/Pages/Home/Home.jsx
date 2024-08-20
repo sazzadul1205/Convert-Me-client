@@ -12,11 +12,16 @@ import BMICalculator from "./BMICalculator/BMICalculator";
 import MortgageCalculator from "./MortgageCalculator/MortgageCalculator";
 import DateCalculator from "./DateCalculator/DateCalculator";
 import HexadecimalCalculator from "./HexadecimalCalculator/HexadecimalCalculator";
+import FractionCalculator from "./FractionCalculator/FractionCalculator";
+import AlgebraCalculator from "./AlgebraCalculator/AlgebraCalculator";
+import CaloriesCalculator from "./CaloriesCalculator/CaloriesCalculator";
+import LoanCalculator from "./LoanCalculator/LoanCalculator";
+import PercentageCalculator from "./PercentageCalculator/PercentageCalculator";
 
 const Home = () => {
   return (
-    <div className="pt-2">
-      <Tabs>
+    <div className="max-w-[1200px] mx-auto">
+      <Tabs >
         <TabList className={"text-black bg-gray-300"}>
           <Tab>Basic Calculator</Tab>
           <Tab>Scientific Calculator</Tab>
@@ -72,6 +77,21 @@ const Home = () => {
         </TabPanel>
         <TabPanel>
           <HexadecimalCalculator></HexadecimalCalculator>
+        </TabPanel>
+        <TabPanel>
+          <FractionCalculator></FractionCalculator>
+        </TabPanel>
+        <TabPanel>
+          <AlgebraCalculator></AlgebraCalculator>
+        </TabPanel>
+        <TabPanel>
+          <CaloriesCalculator></CaloriesCalculator>
+        </TabPanel>
+        <TabPanel>
+          <LoanCalculator></LoanCalculator>
+        </TabPanel>
+        <TabPanel>
+          <PercentageCalculator></PercentageCalculator>
         </TabPanel>
       </Tabs>
     </div>

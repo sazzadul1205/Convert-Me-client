@@ -6,7 +6,7 @@ const PublicLayout = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="bg-white max-w-[1200px] mx-auto">
+      <div className="bg-white ">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

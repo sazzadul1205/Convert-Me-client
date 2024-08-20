@@ -56,95 +56,99 @@ function ScientificCalculator() {
   }
 
   return (
-    <div className="flex justify-center items-center pt-12 bg-gray-200">
-      <div className="  border-black rounded-lg   p-8 flex flex-col items-center">
-        <h1 className="text-green-600 mb-8 text-2xl font-bold">
-          Scientific Calculator
-        </h1>
-        <div className="w-full flex flex-col items-center">
-          <input
-            className="w-full p-2 text-lg border border-gray-400 bg-white rounded-md mb-4 text-black"
-            type="text"
-            value={screenVal || expression}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="w-full flex flex-row justify-between ">
-          <div className="grid grid-cols-3 gap-2 mr-5">
-            {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].map((input) => (
+    <div className="h-screen bg-gray-200">
+      <div className="flex justify-center  pt-20">
+        <div className="  border-black rounded-lg   p-8 flex flex-col items-center">
+          <h1 className="text-green-800 mb-8 text-3xl font-bold">
+            Scientific Calculator
+          </h1>
+          <div className="w-full flex flex-col items-center">
+            <input
+              className="w-full p-2 text-lg border border-gray-400 bg-white rounded-md mb-4 text-black"
+              type="text"
+              value={screenVal || expression}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="w-full flex flex-row justify-between ">
+            <div className="grid grid-cols-3 gap-2 mr-5">
+              {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].map(
+                (input) => (
+                  <button
+                    key={input}
+                    onClick={() => handleClick(input)}
+                    className="w-20 h-20 p-2 text-lg font-semibold bg-gray-300 text-black rounded-md hover:bg-green-200"
+                  >
+                    {input}
+                  </button>
+                )
+              )}
               <button
-                key={input}
-                onClick={() => handleClick(input)}
+                onClick={() => handleClick(".")}
                 className="w-20 h-20 p-2 text-lg font-semibold bg-gray-300 text-black rounded-md hover:bg-green-200"
               >
-                {input}
+                .
               </button>
-            ))}
-            <button
-              onClick={() => handleClick(".")}
-              className="w-20 h-20 p-2 text-lg font-semibold bg-gray-300 text-black rounded-md hover:bg-green-200"
-            >
-              .
-            </button>
-          </div>
-          <div className="grid grid-cols-5 gap-2">
-            {[
-              "+",
-              "-",
-              "*",
-              "/",
-              "^",
-              "sqrt(",
-              "sin(",
-              "cos(",
-              "tan(",
-              "cbrt(",
-              "asin(",
-              "acos(",
-              "atan(",
-              "(",
-              ")",
-            ].map((input) => (
+            </div>
+            <div className="grid grid-cols-5 gap-1">
+              {[
+                "+",
+                "-",
+                "*",
+                "/",
+                "^",
+                "sqrt(",
+                "sin(",
+                "cos(",
+                "tan(",
+                "cbrt(",
+                "asin(",
+                "acos(",
+                "atan(",
+                "(",
+                ")",
+              ].map((input) => (
+                <button
+                  key={input}
+                  onClick={() => handleClick(input)}
+                  className="w-20 h-20 p-2 text-lg font-semibold bg-gray-300 text-black rounded-md hover:bg-green-200"
+                >
+                  {input}
+                </button>
+              ))}
               <button
-                key={input}
-                onClick={() => handleClick(input)}
+                onClick={() => handleClick("pi")}
                 className="w-20 h-20 p-2 text-lg font-semibold bg-gray-300 text-black rounded-md hover:bg-green-200"
               >
-                {input}
+                Pi
               </button>
-            ))}
-            <button
-              onClick={() => handleClick("pi")}
-              className="w-20 h-20 p-2 text-lg font-semibold bg-gray-300 text-black rounded-md hover:bg-green-200"
-            >
-              Pi
-            </button>
-            <button
-              onClick={() => handleClick("fact(")}
-              className="w-20 h-20 p-2 text-lg font-semibold bg-gray-300 text-black rounded-md hover:bg-green-200"
-            >
-              Factorial
-            </button>
-          </div>
-          <div className="flex flex-col items-center ml-3">
-            <button
-              className="w-20 h-20 p-2 text-lg font-semibold bg-red-600 text-white rounded-md hover:bg-red-700 mb-2"
-              onClick={clearScreen}
-            >
-              C
-            </button>
-            <button
-              className="w-20 h-20 p-2 text-lg font-semibold bg-orange-600 text-white rounded-md hover:bg-orange-700 mb-2"
-              onClick={calculate}
-            >
-              =
-            </button>
-            <button
-              className="w-20 h-20 p-2 text-lg font-semibold bg-blue-600 text-white rounded-md hover:bg-blue-700"
-              onClick={backspace}
-            >
-              del
-            </button>
+              <button
+                onClick={() => handleClick("fact(")}
+                className="w-25 h-20 p-2 text-lg font-semibold bg-gray-300 text-black rounded-md hover:bg-green-200"
+              >
+                Fact
+              </button>
+            </div>
+            <div className="flex flex-col items-center ml-3">
+              <button
+                className="w-20 h-20 p-2 text-lg font-semibold bg-red-600 text-white rounded-md hover:bg-red-700 mb-2"
+                onClick={clearScreen}
+              >
+                C
+              </button>
+              <button
+                className="w-20 h-20 p-2 text-lg font-semibold bg-orange-600 text-white rounded-md hover:bg-orange-700 mb-2"
+                onClick={calculate}
+              >
+                =
+              </button>
+              <button
+                className="w-20 h-20 p-2 text-lg font-semibold bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                onClick={backspace}
+              >
+                del
+              </button>
+            </div>
           </div>
         </div>
       </div>
