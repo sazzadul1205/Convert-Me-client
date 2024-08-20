@@ -6,8 +6,12 @@ import GraphingCalculator from "./GraphingCalculator/GraphingCalculator";
 import FinancialCalculator from "./FinancialCalculator/FinancialCalculator";
 import ProgrammableCalculator from "./ProgrammableCalculator/ProgrammableCalculator";
 import PrintingCalculator from "./PrintingCalculator/PrintingCalculator";
-import OnlineCalculator from "./OnlineCalculator/OnlineCalculator";
-import DesktopCalculator from "./DesktopCalculator/DesktopCalculator";
+import ConstructionCalculator from "./ConstructionCalculator/ConstructionCalculator";
+import MatrixCalculator from "./MatrixCalculator/MatrixCalculator";
+import BMICalculator from "./BMICalculator/BMICalculator";
+import MortgageCalculator from "./MortgageCalculator/MortgageCalculator";
+import DateCalculator from "./DateCalculator/DateCalculator";
+import HexadecimalCalculator from "./HexadecimalCalculator/HexadecimalCalculator";
 
 const Home = () => {
   return (
@@ -20,13 +24,8 @@ const Home = () => {
           <Tab>Financial Calculator</Tab>
           <Tab>Programmable Calculator</Tab>
           <Tab>Printing Calculator</Tab>
-          <Tab>Online Calculator</Tab>
-          <Tab>Desktop Calculator</Tab>
-          <Tab>Pocket Calculator</Tab>
           <Tab>Construction Calculator</Tab>
           <Tab>Matrix Calculator</Tab>
-          <Tab>Unit Converter Calculator</Tab>
-          <Tab>Currency Converter Calculator</Tab>
           <Tab>BMI Calculator</Tab>
           <Tab>Mortgage Calculator</Tab>
           <Tab>Date Calculator</Tab>
@@ -57,10 +56,22 @@ const Home = () => {
           <PrintingCalculator></PrintingCalculator>
         </TabPanel>
         <TabPanel>
-          <OnlineCalculator></OnlineCalculator>
+          <ConstructionCalculator></ConstructionCalculator>
         </TabPanel>
         <TabPanel>
-          <DesktopCalculator></DesktopCalculator>
+          <MatrixCalculator></MatrixCalculator>
+        </TabPanel>
+        <TabPanel>
+          <BMICalculator></BMICalculator>
+        </TabPanel>
+        <TabPanel>
+          <MortgageCalculator></MortgageCalculator>
+        </TabPanel>
+        <TabPanel>
+          <DateCalculator></DateCalculator>
+        </TabPanel>
+        <TabPanel>
+          <HexadecimalCalculator></HexadecimalCalculator>
         </TabPanel>
       </Tabs>
     </div>
